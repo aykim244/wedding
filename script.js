@@ -223,15 +223,23 @@ function parentLine(father, mother, fatherDeceased, motherDeceased) {
 }
 
     const parentsHTML = `
-      <div class="parent-row">
-        ${parentLine(g.father, g.mother, g.fatherDeceased, g.motherDeceased)}
-        의 아들 <span class="child-name">${g.name}</span>
-      </div>
-      <div class="parent-row">
-        ${parentLine(b.father, b.mother, b.fatherDeceased, b.motherDeceased)}
-        의 딸 <span class="child-name">${b.name}</span>
-      </div>
-    `;
+  <div class="parent-row">
+    ${parentLine(g.father, g.mother, g.fatherDeceased, g.motherDeceased)}
+    의 아들 
+    <span class="child-name">
+      ${g.name}
+      <a href="tel:${g.phone}" class="phone-link">📞</a>
+    </span>
+  </div>
+  <div class="parent-row">
+    ${parentLine(b.father, b.mother, b.fatherDeceased, b.motherDeceased)}
+    의 딸 
+    <span class="child-name">
+      ${b.name}
+      <a href="tel:${b.phone}" class="phone-link">📞</a>
+    </span>
+  </div>
+`;
 
     $('#greetingParents').innerHTML = parentsHTML;
   }
