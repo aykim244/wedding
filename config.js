@@ -19,6 +19,7 @@ const CONFIG = {
   // ── 메인 (히어로) ──
   groom: {
     name: "이상형",
+    phone: "010-9717-6227",
     nameEn: "Groom",
   father: "이순구",
   mother: "",  // 👈 추가 (빈값이라도 넣어야 undefined 안 뜸)
@@ -28,6 +29,7 @@ const CONFIG = {
 
   bride: {
     name: "박주영",
+    phone: "010-4495-8832", 
     nameEn: "Bride",
     father: "박상안",
     mother: "최장미",
