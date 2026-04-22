@@ -475,9 +475,14 @@ function parentLine(father, mother, fatherDeceased, motherDeceased) {
     $('#locationAddress').textContent = w.address;
     $('#locationTel').textContent = w.tel ? `Tel. ${w.tel}` : '';
     $('#locationMapImg').src = 'images/location/1_v2.jpg';
-    const mapImg = $('#locationMapImg');
+  const mapImg = $('#locationMapImg');
+
 mapImg.addEventListener('click', () => {
-  openPhotoModal(['images/location/1_v2.jpg'], 0);
+  if (typeof openPhotoModal === 'function') {
+    openPhotoModal(['images/location/1_v2.jpg'], 0);
+  } else {
+    console.error('modal 함수 없음');
+  }
 });
     $('#kakaoMapBtn').href = w.mapLinks.kakao || '#';
     $('#naverMapBtn').href = w.mapLinks.naver || '#';
