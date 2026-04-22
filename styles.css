@@ -1270,3 +1270,9 @@ a {
   position: relative;
   z-index: 10;
 }
+.photo-modal__img {
+  max-width: 100%;
+  max-height: 90vh;
+  transition: transform 0.3s ease;
+  touch-action: manipulation; /* 🔥 중요 */
+}
