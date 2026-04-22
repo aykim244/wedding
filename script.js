@@ -429,8 +429,8 @@ function parentLine(father, mother, fatherDeceased, motherDeceased) {
     $('#modalNext').addEventListener('click', () => modalNavigate(1));
 
     const modal = $('#photoModal');
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal || e.target.id === 'modalContainer') {
+     modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
         closePhotoModal();
       }
     });
