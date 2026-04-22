@@ -1258,3 +1258,15 @@ a {
     transform: none !important;
   }
 }
+.animate-item {
+  pointer-events: none;
+}
+
+.animate-item.is-visible {
+  pointer-events: auto;
+}
+
+.location__map-img {
+  position: relative;
+  z-index: 10;
+}
